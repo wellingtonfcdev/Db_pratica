@@ -37,3 +37,9 @@ WHERE BusinessEntityID IN (2,7,13)
 --Like
 SELECT * FROM PERSON.Person
 WHERE FirstName LIKE '%to%'
+
+-- Inner Join
+SELECT * FROM
+PERSON.PersonPhone PP
+INNER JOIN PERSON.PhoneNumberType PT 
+ON PT.PhoneNumberTypeID = PP.PhoneNumberTypeID
