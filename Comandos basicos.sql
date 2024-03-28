@@ -43,3 +43,9 @@ SELECT * FROM
 PERSON.PersonPhone PP
 INNER JOIN PERSON.PhoneNumberType PT 
 ON PT.PhoneNumberTypeID = PP.PhoneNumberTypeID
+
+-- Left Join
+SELECT * FROM PERSON.Person PP
+LEFT JOIN Sales.PersonCreditCard PC
+ON PP.BusinessEntityID = PC.BusinessEntityID
+WHERE PC.BusinessEntityID IS NULL
